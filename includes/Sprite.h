@@ -2,7 +2,7 @@
 
 class Sprite
 {
-private:
+protected:
     int m_x;
     int m_y;
     SDL_Color m_color; 

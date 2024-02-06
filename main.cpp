@@ -1,5 +1,5 @@
 #include "SDL.h" 
-#include "Sprite.h"
+#include "Snake.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,8 +18,11 @@ int main(int argc, char *argv[])
   
   SDL_RenderClear(renderer);
   SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-  Sprite snake = Sprite();
-  SDL_SetRenderDrawColor( renderer, 0xFF, 0x00, 0x00, 0xFF );  
+
+  Sprite food = Sprite(50,50);
+  food.draw(renderer);
+
+  Snake snake = Snake(50,50);
   snake.draw(renderer);
   
 //   SDL_SetRenderDrawColor(renderer, 255, 0, 0, SDL_ALPHA_OPAQUE);
